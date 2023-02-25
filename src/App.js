@@ -14,14 +14,14 @@ const App = () => {
         } else {
             let bmi = (weight / height / height) * 10000;
             setBmi(bmi.toFixed(1));
-        }
 
-        if (bmi < 25) {
-            setMessage('You are underweight');
-        } else if (bmi >= 25 && bmi < 30) {
-            setMessage('You are a healthy weight');
-        } else {
-            setMessage('You are overweight');
+            if (bmi < 25) {
+                setMessage('You are underweight');
+            } else if (bmi >= 25 && bmi < 30) {
+                setMessage('You are a healthy weight');
+            } else {
+                setMessage('You are overweight');
+            }
         }
     };
 
